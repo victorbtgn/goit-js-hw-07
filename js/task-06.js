@@ -15,6 +15,9 @@ function onblur(event) {
     inputRef.classList.add("valid");
     return;
   }
+  if (event.target.value.length === 0) {
+    return onFocus();
+  }
   inputRef.classList.add("invalid");
   return;
 }
