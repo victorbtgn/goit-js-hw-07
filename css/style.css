@@ -65,3 +65,21 @@ body {
 .taskFour span {
   font-size: 30px;
 }
+
+/* Task 6 */
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
