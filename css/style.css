@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+}
+
+/* task 3 */
+
+.taskThree {
+  display: flex;
+  justify-content: space-around;
+}
+
+.taskThree li:not(:last-child) {
+  margin-bottom: 50px;
+}

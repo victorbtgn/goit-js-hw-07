@@ -12,11 +12,18 @@ const ingredients = [
 const ulRef = document.querySelector("#ingredients");
 
 const productListTag = array =>
-  array.map(item => {
+  array.forEach(item => {
     const product = document.createElement("li");
     product.textContent = item;
-    return ulRef.appendChild(product);
+    ulRef.appendChild(product);
   });
+
+// const productListTag = array =>
+//   array.map(item => {
+//     const product = document.createElement("li");
+//     product.textContent = item;
+//     return ulRef.appendChild(product);
+//   });
 
 console.log(ulRef);
 console.log(productListTag(ingredients));
