@@ -12,11 +12,16 @@ body {
 
 /* task 3 */
 
-.taskThree {
+.taskThree ul {
   display: flex;
   justify-content: space-around;
+  list-style: none;
 }
 
 .taskThree li:not(:last-child) {
   margin-bottom: 50px;
+}
+
+.taskThree img {
+  width: 500px;
 }

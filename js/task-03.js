@@ -19,22 +19,37 @@ const images = [
 ];
 
 const ulRef = document.querySelector("#gallery");
-console.log(ulRef);
+
+//  =============================
+// Не работает так как в теге 'img' атрибут 'url' не подтягивает изображения,
+// код рабочий если 'url' переименовать в 'src'
+
+// const galleryListTag = array =>
+//   array.forEach(element => {
+//     const listItem = document.createElement("li");
+//     const image = document.createElement("img");
+
+//     element = Object.entries(element).forEach(item => {
+//       image.setAttribute(item[0], item[1]);
+//     });
+//     listItem.appendChild(image);
+
+//     ulRef.insertAdjacentHTML(`afterbegin`, `<li>${listItem.innerHTML}</li>`);
+//   });
+
+//  ==============================
 
 const galleryListTag = array =>
   array.forEach(element => {
     const listItem = document.createElement("li");
     const image = document.createElement("img");
 
-    element = Object.entries(element).forEach(item => {
-      image.setAttribute(item[0], item[1]);
-      console.log(item[1]);
-    });
+    image.setAttribute("src", element.url);
+    image.setAttribute("alt", element.alt);
+
     listItem.appendChild(image);
 
     ulRef.insertAdjacentHTML(`afterbegin`, `<li>${listItem.innerHTML}</li>`);
-
-    // console.log(listItem);
   });
 
 console.log(galleryListTag(images));
