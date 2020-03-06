@@ -10,6 +10,27 @@ body {
   box-sizing: inherit;
 }
 
+.module {
+  margin: 0 100px 50px;
+}
+
+/* Task 1 */
+
+.taskOne {
+  width: 500px;
+}
+
+.taskOne > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 50px 0;
+}
+
+.item {
+  margin-right: 50px;
+}
+
 /* task 3 */
 
 .taskThree ul {
@@ -24,4 +45,23 @@ body {
 
 .taskThree img {
   width: 500px;
+}
+
+/* task 4 */
+
+.taskFour div {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.taskFour button {
+  width: 200px;
+  height: 50px;
+}
+
+.taskFour span {
+  font-size: 30px;
 }
