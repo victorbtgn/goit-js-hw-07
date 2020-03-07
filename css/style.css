@@ -83,3 +83,9 @@ body {
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+/* Task 8 */
+
+#controls {
+  margin-bottom: 30px;
+}
