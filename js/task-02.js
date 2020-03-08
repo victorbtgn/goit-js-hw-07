@@ -11,12 +11,24 @@ const ingredients = [
 
 const ulRef = document.querySelector("#ingredients");
 
-const productListTag = array =>
+// ===== За одну операцію
+
+const productListTag = array => {
+  const products = [];
   array.forEach(item => {
     const product = document.createElement("li");
     product.textContent = item;
-    ulRef.appendChild(product);
+    products.push(product);
   });
+  ulRef.append(...products);
+};
+
+// const productListTag = array =>
+//   array.forEach(item => {
+//     const product = document.createElement("li");
+//     product.textContent = item;
+//     ulRef.appendChild(product);
+//   });
 
 // const productListTag = array =>
 //   array.map(item => {
