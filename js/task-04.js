@@ -8,7 +8,7 @@ decrementBtn.addEventListener("click", decrement);
 incrementBtn.addEventListener("click", increment);
 
 function decrement() {
-  counterValue.textContent -= 1;
+  counterValue.textContent = Number(counterValue.textContent) - 1;
 }
 
 function increment() {

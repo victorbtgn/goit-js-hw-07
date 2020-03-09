@@ -20,8 +20,8 @@ const images = [
 
 const ulRef = document.querySelector("#gallery");
 
-const galleryListTag = array =>
-  array.forEach(element => {
+const galleryListTag = array => {
+  const gallery = array.reduce((acc, element) => {
     const listItem = document.createElement("li");
     const image = document.createElement("img");
 
@@ -30,8 +30,11 @@ const galleryListTag = array =>
 
     listItem.appendChild(image);
 
-    ulRef.insertAdjacentHTML(`afterbegin`, `<li>${listItem.innerHTML}</li>`);
-  });
+    acc += `<li>${listItem.innerHTML}</li>`;
+    return acc;
+  }, "");
+  ulRef.insertAdjacentHTML(`afterbegin`, `${gallery}`);
+};
 
 console.log(galleryListTag(images));
 

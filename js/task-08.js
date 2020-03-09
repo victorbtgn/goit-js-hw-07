@@ -13,6 +13,7 @@ function inputValue() {
 }
 
 function createBoxes(amount) {
+  const boxes = [];
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement("div");
     box.setAttribute("id", "square");
@@ -21,8 +22,9 @@ function createBoxes(amount) {
     box.style.backgroundColor = randomRGB();
     box.style.margin = "5px";
     box.style.display = "inline-block";
-    boxesRef.appendChild(box);
+    boxes.push(box);
   }
+  boxesRef.append(...boxes);
 }
 
 function randomRGB() {

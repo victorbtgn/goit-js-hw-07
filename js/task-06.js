@@ -6,8 +6,7 @@ inputRef.addEventListener("focus", onFocus);
 inputRef.addEventListener("blur", onblur);
 
 function onFocus(event) {
-  inputRef.classList.remove("valid");
-  inputRef.classList.remove("invalid");
+  inputRef.classList.remove("valid", "invalid");
 }
 
 function onblur(event) {
